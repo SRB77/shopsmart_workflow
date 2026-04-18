@@ -1,0 +1,3 @@
+[submodule "html_ec2"]
+	path = html_ec2
+	url = https://github.com/SRB77/deploy_html_to_ec2
