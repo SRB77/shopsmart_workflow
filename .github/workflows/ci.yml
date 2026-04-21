@@ -21,8 +21,10 @@ jobs:
           node-version: '22'
           cache: 'npm'
       - name: Install dependencies
+        working-directory: ./client
         run: npm ci
       - name: Verify build
+        working-directory: ./client
         run: npm run build
       # Optional not mentioned in task1 : upload the build artefact for inspection
       - name: Upload build artefact
@@ -30,4 +32,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: vite-build
-          path: ./dist          
+          path: ./client/dist          
