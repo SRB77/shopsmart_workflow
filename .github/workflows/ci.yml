@@ -1,0 +1,33 @@
+name : CI - install dependencies , verify build 
+
+# Run on every push and pull request to main branch 
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    name: Build and Test Shopsmart
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+      - name: Install dependencies
+        run: npm ci
+      - name: Verify build
+        run: npm run build
+      # Optional not mentioned in task1 : upload the build artefact for inspection
+      - name: Upload build artefact
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: vite-build
+          path: ./dist          
