@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FOREVERBUY - The Architectural Curator</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;900&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface": "#121c2a",
+                        "surface-dim": "#d0daef",
+                        "secondary-fixed-dim": "#c6c6c6",
+                        "outline": "#8d7075",
+                        "tertiary-container": "#636363",
+                        "on-surface-variant": "#594046",
+                        "surface-tint": "#b81059",
+                        "secondary": "#5e5e5e",
+                        "surface-bright": "#f9f9ff",
+                        "on-tertiary-fixed": "#1b1c1c",
+                        "secondary-fixed": "#e2e2e2",
+                        "on-primary-fixed-variant": "#8f0042",
+                        "inverse-on-surface": "#ebf1ff",
+                        "surface-container-highest": "#d9e3f7",
+                        "surface-container-lowest": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "on-error": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "secondary-container": "#e2e2e2",
+                        "on-background": "#121c2a",
+                        "surface-variant": "#d9e3f7",
+                        "error": "#ba1a1a",
+                        "on-error-container": "#93000a",
+                        "surface": "#f9f9ff",
+                        "tertiary-fixed": "#e4e2e1",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-fixed-variant": "#474747",
+                        "outline-variant": "#e0bec4",
+                        "on-primary-container": "#ffd5dd",
+                        "on-tertiary-fixed-variant": "#474747",
+                        "on-secondary-fixed": "#1b1b1b",
+                        "tertiary": "#4b4b4b",
+                        "primary": "#970046",
+                        "primary-fixed-dim": "#ffb1c3",
+                        "surface-container": "#e6eeff",
+                        "surface-container-low": "#eff3ff",
+                        "on-primary": "#ffffff",
+                        "surface-container-high": "#dee9fd",
+                        "on-tertiary-container": "#e2e0df",
+                        "on-secondary-container": "#646464",
+                        "primary-container": "#be185d",
+                        "tertiary-fixed-dim": "#c8c6c6",
+                        "inverse-surface": "#273140",
+                        "primary-fixed": "#ffd9e0",
+                        "background": "#f9f9ff",
+                        "on-primary-fixed": "#3f0019",
+                        "inverse-primary": "#ffb1c3"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "0px"
+                    },
+                    "spacing": {},
+                    "fontFamily": {
+                        "headline": ["Noto Serif", "serif"],
+                        "body": ["Plus Jakarta Sans", "sans-serif"],
+                        "label": ["Plus Jakarta Sans", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        h1, h2, h3, h4, h5, h6, .font-headline { font-family: 'Noto Serif', serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="bg-white/80 dark:bg-black/80 backdrop-blur-xl fixed top-0 w-full z-50 bg-surface-container-low flat no shadows">
+<div class="flex justify-between items-center px-12 py-6 max-w-[1920px] mx-auto">
+<!-- Brand -->
+<a class="text-2xl font-black tracking-widest text-black dark:text-white font-['Noto_Serif']" href="#">
+                FOREVERBUY
+            </a>
+<!-- Navigation Links -->
+<div class="hidden md:flex gap-8 items-center font-['Noto_Serif'] tracking-tighter uppercase">
+<a class="text-[#BE185D] border-b-2 border-[#BE185D] pb-1 hover:text-[#BE185D] transition-colors duration-300" href="#">NEW ARRIVALS</a>
+<a class="text-black dark:text-white font-medium hover:text-[#BE185D] transition-colors duration-300 scale-95 duration-200" href="#">COLLECTIONS</a>
+<a class="text-black dark:text-white font-medium hover:text-[#BE185D] transition-colors duration-300 scale-95 duration-200" href="#">CURATED</a>
+<a class="text-black dark:text-white font-medium hover:text-[#BE185D] transition-colors duration-300 scale-95 duration-200" href="#">ABOUT</a>
+</div>
+<!-- Actions -->
+<div class="flex items-center gap-6 text-[#BE185D]">
+<button aria-label="Search" class="hover:text-primary-container transition-colors">
+<span class="material-symbols-outlined text-2xl">search</span>
+</button>
+<button aria-label="Profile" class="hover:text-primary-container transition-colors">
+<span class="material-symbols-outlined text-2xl" data-icon="person">person</span>
+</button>
+<button aria-label="Cart" class="hover:text-primary-container transition-colors relative">
+<span class="material-symbols-outlined text-2xl" data-icon="shopping_bag">shopping_bag</span>
+<span class="absolute -top-1 -right-2 bg-primary text-on-primary text-[10px] w-4 h-4 flex items-center justify-center">2</span>
+</button>
+</div>
+</div>
+</nav>
+<main class="flex-grow pt-24">
+<!-- Hero Section -->
+<section class="max-w-[1920px] mx-auto px-4 md:px-12 py-12 md:py-24">
+<div class="flex flex-col md:flex-row bg-surface-container-lowest">
+<!-- Text Content -->
+<div class="flex-1 flex flex-col justify-center p-12 md:p-24 order-2 md:order-1">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-[2px] bg-secondary-fixed-dim"></div>
+<span class="font-body text-secondary tracking-widest text-sm uppercase">OUR BESTSELLERS</span>
+</div>
+<h1 class="font-headline text-5xl md:text-7xl font-bold leading-tight mb-8 text-on-surface">
+                        Latest Arrivals
+                    </h1>
+<div class="flex items-center gap-4 mt-8">
+<a class="font-body text-on-surface font-semibold tracking-widest text-sm uppercase hover:text-primary transition-colors" href="#">SHOP NOW</a>
+<div class="w-12 h-[2px] bg-secondary-fixed-dim"></div>
+</div>
+</div>
+<!-- Hero Image -->
+<div class="flex-1 order-1 md:order-2 h-[614px] md:h-auto min-h-[500px]">
+<img alt="Fashion model wearing minimalist luxury clothing" class="w-full h-full object-cover grayscale-[20%]" data-alt="high fashion editorial shot of young woman in elegant minimalist clothing against clean studio background, sharp lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeOeXjVWbMguk6XYLgfrE3ZopbyVoKrrxwb7LQLUM8_osNaM-TymeLtiJzMEdNimMYyooI6w9j2njCUY2XzJn6nq-3nFKDgnOMh7qgRWmfVft7k9hBm7GvcWsfhFDHzNWTzxbNm8FJw_qVdV1tafUb7jxbMRWI6O1N6Kx6TJvU8JhkCcuEhZpRZJBzgFv74G9bTxvEYExrAaPAJ3B5YzSJ36N1kzhKwgJZoEiP24tYUSZyInNYhROhwx5SXruu5jG2Epr5eI0S2bRa"/>
+</div>
+</div>
+</section>
+<!-- Latest Collections -->
+<section class="max-w-[1920px] mx-auto px-4 md:px-12 py-24 bg-surface-container-low">
+<div class="text-center mb-16">
+<h2 class="font-headline text-4xl font-bold mb-4 text-on-surface">LATEST COLLECTIONS</h2>
+<p class="font-body text-secondary max-w-2xl mx-auto">Curated architectural pieces designed for the modern aesthetic. Explore our newest arrivals embodying sharp minimalism.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Product Card 1 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] bg-surface-container-lowest overflow-hidden mb-8">
+<img alt="Women's structured blazer" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="women's luxury structured blazer in neutral tones on minimal background, high contrast lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBO76EbuiXaImMWjElD2iR4_gk2QsUR9-igDIjNAAAWDXj1rjI1tn61ukd6tDqCrqN4tdWknlVPXW4zALplBstlb46M2nz9QdKdcniXrLVpbcO_CgBag0NqVGAg7g4Itz-jkFevScYxBAlwKucVFf_Ap8LtXL5QvxdISIfOAlsWAk6cQ-UOZe-hiogcQPYm09RKLZ0OhCP_YnsLaweNdjmr1HkgqvNRNDVJOkEX0bF6K-FXIVR8BvjojVoYxSqErtYutktg2j4elgjE"/>
+</div>
+<h3 class="font-body font-medium text-lg text-on-surface mb-2">Structured Wool Blazer</h3>
+<p class="font-body text-secondary">$340.00</p>
+</div>
+<!-- Product Card 2 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] bg-surface-container-lowest overflow-hidden mb-8">
+<img alt="Men's minimalist overcoat" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="men's minimalist dark grey overcoat, sharp tailoring, moody studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdJL4XPcm01W5-C5ro66xxpRZbpKh8p-43O11XuRqt8sajD_0e-fa9S5ip9MDCjigTzywKs8b92KxlmGQlNAt1rfGXZMTYfhYMcRxGqJWZYoy_wo2vk5a3nzK3smd9WtlBLAJrFmYslX0sCOZ6Sd_hKj9jG_VdkxAvxwn7y7qcBrFrRwmbjtq6Z4stJ8-ptmD4QFrWLvCnmJU7sPkoDtmNUacP4r4cYrDcTW45OZv6aIEOJjeS4AwBFLyF4u8lVOfF5gnjUdeK55vZ"/>
+</div>
+<h3 class="font-body font-medium text-lg text-on-surface mb-2">Architectural Overcoat</h3>
+<p class="font-body text-secondary">$480.00</p>
+</div>
+<!-- Product Card 3 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] bg-surface-container-lowest overflow-hidden mb-8">
+<img alt="Pleated wide leg trousers" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="close up of wide leg pleated trousers in light cream fabric, emphasizing texture and crisp lines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtQnC6j080jO_t8uCiqmMG6MOsX2eeJtNbyHnfFnou7EuUHzrDMSd7Y7D0gl_W8UtdI-otMcNfXhCwiT319Lct6dxBfzMBelV3daJ6x5eVnRZzZFbKEVVcDwofHY4X0-xqyYAKD216dg6uRXnG8W5ObQjWGwt_U5GVf273PZ9yZ5Bild2UV9IdgiWl5evuVl2F7ta5ne4A-6K8LqnKpwQ_45m8NDmqz2TvfOwRpvQvpfhCTxMJpQ9iV-52igU7iFiBfZ4kiiZWTQLc"/>
+</div>
+<h3 class="font-body font-medium text-lg text-on-surface mb-2">Pleated Volume Trousers</h3>
+<p class="font-body text-secondary">$220.00</p>
+</div>
+<!-- Product Card 4 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] bg-surface-container-lowest overflow-hidden mb-8">
+<img alt="Minimalist silk shirt" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="men's minimalist white silk button down shirt draped elegantly, soft natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTqzu7S7PC6BFe6hZSkzbn4cw2wS9HQ_wbsdkwqcWu1Pk63x-gtBhZvmB-GKWJZS4E1yhIbXx1Y8vPcxoQw2bv6eNK8B1y-LJaudlBR2yUq5XEWZoYURnefG2zZsXGR7QoEPrcH6I3EoV2KtLW1s9vlBqtsG6vUgJIngcRBEuqzCPiGGooS5JIgf64igpsDCZlrNxpQv-3V2CtPS-RBkCeunag6fie4j6d3pZRfyYRUKhzKEipf975MnwsOyV_OtGAJOzUIU6wu3y0"/>
+</div>
+<h3 class="font-body font-medium text-lg text-on-surface mb-2">Oversized Silk Shirt</h3>
+<p class="font-body text-secondary">$185.00</p>
+</div>
+<!-- Product Card 5 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] bg-surface-container-lowest overflow-hidden mb-8">
+<img alt="Asymmetric Knit Sweater" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="women's asymmetric knit sweater in cream, studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDph33t8qGqiiwCTJM_CUyqDMHDHSeERW3tM5XqwqPox7QAhw2aeHjidg79_JdC1u32dU-yzoQpl9wilXGta5KGpk3D-yBsPRN2C-VpRF_sNwEYbyfgLl85EqQKY1HgVccyBRR24BpOilxKA0Oy_ZYwOVdcoQGJ4rd3OT83avNv4M2RnOyuw4ugEaXoUv86TtoQWyujCa0y4cYjWl-M8poN7UDizCz7qW1QvnMfjgag8qFP62lSIXEl7zLWgYjsqCvLbHF8GoW9etYC"/>
+</div>
+<h3 class="font-body font-medium text-lg text-on-surface mb-2">Asymmetric Knit Sweater</h3>
+<p class="font-body text-secondary">$260.00</p>
+</div>
+<!-- Product Card 6 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] bg-surface-container-lowest overflow-hidden mb-8">
+<img alt="Structured Leather Tote" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="minimalist structured black leather tote bag" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWirgYgjJ496Wse38AJu07-QnlbSIHMxEdNXZWbylmmBxPfRKlF_wCkLwwreyEMPSOlLkU1xNqTMucv0SOVHCVAesPO9m5bDQRe8GKZnQ_rGLWIC_h4BfVdPNNJXDcRwhNAsd-TJYfG_raQG08ikwg4BCqoWSW-QtkIwAntvUk8HZF7DWNszpeDKHdqFj2SdjZxwPZ94mhz4ws8i4ev8hHRqixGGndo3OpovygX5fkGL2haLUMSbi3ml-MzTMicmS2LvaHM_rZbLer"/>
+</div>
+<h3 class="font-body font-medium text-lg text-on-surface mb-2">Structured Leather Tote</h3>
+<p class="font-body text-secondary">$550.00</p>
+</div>
+<!-- Product Card 7 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] bg-surface-container-lowest overflow-hidden mb-8">
+<img alt="Tailored Wool Vest" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="men's tailored wool vest in dark grey" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7CRQsdl8g--pPykTs_bVZfGJ8KfOak7YrTpE9PeP2TabNN25t55CK5cqj4sw2jzJGZco3CO0Aw7yCN67Kt5EZ5PuAKfkMdnGCCuCOQmVXF4-CJMQxClFYc4eDvEya1PGL38e5zo_y_uunc_3MvTetvsGSLMuhD1oXXyGTDgLi6tjixRaSJbdYavZn9cVPtmI8VQv04eHVHIfVKKhHqa_vWT3E2knfnXZsYXxHr69kGd2e3eSsDGjRjXnHsYvwQCSC3xzh3iP9j9gE"/>
+</div>
+<h3 class="font-body font-medium text-lg text-on-surface mb-2">Tailored Wool Vest</h3>
+<p class="font-body text-secondary">$195.00</p>
+</div>
+<!-- Product Card 8 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] bg-surface-container-lowest overflow-hidden mb-8">
+<img alt="Geometric Gold Earrings" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="minimalist geometric gold earrings on marble surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCHPS2xgDI1O1dciqR6K3GZGwVtxb0RwfVuJbWxlqOEM5NLl87_-FSWwINGUrP5vchHVU1N-aYgKscw9LPgECEL8jBSt98GqjYhqupxpn9034yxHAPu1ASzN5PPO8h2DGsLeT8_XvWC_N6VSU0y1lucPoDjTiRCE2KlxG2GNIdEVjVaJO1quUZ2v7u5vsWB5Z5TtUGqZiYU58_Ew2xEtYkwkCaFBx8EuOUX564Yh9AieVaHl55BK_35LE6vHraa90fjU2S_QHCuEsu"/>
+</div>
+<h3 class="font-body font-medium text-lg text-on-surface mb-2">Geometric Gold Earrings</h3>
+<p class="font-body text-secondary">$140.00</p>
+</div>
+</div>
+</section>
+<!-- Best Sellers -->
+<section class="max-w-[1920px] mx-auto px-4 md:px-12 py-24 bg-surface">
+<div class="text-center mb-16">
+<h2 class="font-headline text-4xl font-bold mb-4 text-on-surface">BEST SELLERS</h2>
+<p class="font-body text-secondary max-w-2xl mx-auto">Our most sought-after pieces. Signature designs that define the Foreverbuy aesthetic.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Product Card 1 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] bg-surface-container-lowest overflow-hidden mb-8">
+<img alt="Cashmere Turtleneck" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="luxurious men's cashmere turtleneck in navy blue" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8GWRGRCYwE_8mg_ayGYyqgcSMZSAXMEHc0SLSFmRYhQLM8TfKkKeh8LdSSnknCzYSCr40h9Zbcf5rs1uS1-pqtXvxGhfpa1Gtm_lL0ooy4aeid-sPDEUllQPn_7-4uWi1ZCnbnnT5wxOEY-V1Yw2lEezZv8JYDPIrju6tyHiYIXpnDzDAQiGP5u0wq8VeJGHmHAaqaXZPwMML9M35Af7YWXzqvquxHhn0SGceV8tNR2uWyXp8zn4gZSbRU-fFUG1-P_zgvilzlRX1"/>
+</div>
+<h3 class="font-body font-medium text-lg text-on-surface mb-2">Cashmere Turtleneck</h3>
+<p class="font-body text-secondary">$320.00</p>
+</div>
+<!-- Product Card 2 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] bg-surface-container-lowest overflow-hidden mb-8">
+<img alt="High-Waisted Silk Trousers" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="women's high-waisted wide-leg silk trousers in black" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGN6j6Ynfk-F0G3OmoXyiLFsPGYwBQE3ZYXhaKAPHe2IairJRiZK71K5usTTCgCac_7TjNUGpVoTQsk_38HVG-THk2qp2K-u4_m-sZPuGKY7l6jC_Xfmavai3nGc533ijpx3u8Owx1foDgx-f2inzZjBjCsjXoiaLKIzcpTle7QMv0Fityq-1THm3y-RohCVek8_a8QJGieFabsPbNUwfhcqErw9KJtWjnTvIzXbhCpzvPRr67Uw3B5IbggEKpWt_s4D8iOWOaHRst"/>
+</div>
+<h3 class="font-body font-medium text-lg text-on-surface mb-2">High-Waisted Silk Trousers</h3>
+<p class="font-body text-secondary">$285.00</p>
+</div>
+<!-- Product Card 3 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] bg-surface-container-lowest overflow-hidden mb-8">
+<img alt="Double-Breasted Trench" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="classic double-breasted trench coat in camel" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdtvmrQxe6-v_QgWtiHhlGc11oBxZP4SNtGAF4SomrnmsRLhu3V6SkVV2zrUUvuyHgp_pjfq7gmFQqabLeiYWP0_K-LQOfUAq3TnHadVTuAheSk1BCYOermRO7e0ErhtIodj0BJbWTI0IZ-rgdhhG3ztMJUlpgPGxWi9_pssEtVkgzwPmpkGLTvPIJwRbHtQTckW6knKkprC-7pLdqNa_fY4ibYF-Gjb-6xo_GPgw72Q2bXRQOpdna_DI0Hcg6Bog8wewkQOguqQXA"/>
+</div>
+<h3 class="font-body font-medium text-lg text-on-surface mb-2">Double-Breasted Trench</h3>
+<p class="font-body text-secondary">$650.00</p>
+</div>
+<!-- Product Card 4 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] bg-surface-container-lowest overflow-hidden mb-8">
+<img alt="Leather Chelsea Boots" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="sleek black leather chelsea boots" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNROK3Dmup5XcwKvEKRpmve76PauIlsdvyNlDOk-w8k9_WVUJloVCyVHjxjmia3CmowsDtRhHuajerN99k7DNgdmDpsZh02HUVoopfwXU4MArEglHurX9v5GXF3U_UqObWfb6vZiboXdL1vZ-zkfdWntkhtZ7CdHg3FPSx3fA_IU2GtNsJG6UejckLB_0XVo7CaPEiozani5X_MVHbJUia1h2MoS2el4UiIbzSEAPKDXRk0IU-Vupao4-MecTr-YtpM90f4i_hDFVN"/>
+</div>
+<h3 class="font-body font-medium text-lg text-on-surface mb-2">Leather Chelsea Boots</h3>
+<p class="font-body text-secondary">$420.00</p>
+</div>
+</div>
+</section>
+<!-- Newsletter Section -->
+<section class="max-w-4xl mx-auto px-4 md:px-12 py-32 text-center">
+<h2 class="font-headline text-3xl md:text-4xl font-bold mb-4 text-on-surface">Subscribe now &amp; get 20% off</h2>
+<p class="font-body text-secondary mb-12">Join our curatorial list to receive updates on new collections and exclusive access.</p>
+<form class="flex flex-col md:flex-row max-w-xl mx-auto">
+<input class="flex-grow bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 px-4 py-4 font-body text-on-surface placeholder-secondary-fixed-dim transition-colors" placeholder="Enter your email" type="email"/>
+<button class="bg-black text-white font-body font-bold tracking-[2px] uppercase px-12 py-4 mt-6 md:mt-0 hover:bg-primary-container transition-colors duration-300" type="submit">
+                    SUBSCRIBE
+                </button>
+</form>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#eff3ff] dark:bg-slate-900 w-full border-0 tonal shift from surface to surface-container-low flat no shadows">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center px-12 py-16 gap-8 max-w-[1920px] mx-auto">
+<div class="max-w-sm">
+<div class="text-lg font-bold text-black dark:text-white mb-6 font-headline">FOREVERBUY</div>
+<p class="font-body text-secondary text-sm leading-relaxed mb-6">
+                    A curated selection of architectural fashion and lifestyle objects. Redefining modern minimalism through intentional design.
+                </p>
+<div class="text-xs font-['Plus_Jakarta_Sans'] tracking-widest uppercase text-slate-500 dark:text-slate-400">
+                    © 2024 FOREVERBUY. THE ARCHITECTURAL CURATOR. ALL RIGHTS RESERVED.
+                </div>
+</div>
+<div class="flex flex-wrap gap-16 md:gap-24">
+<div>
+<h4 class="font-headline text-on-surface font-bold mb-6 tracking-wide">COMPANY</h4>
+<ul class="flex flex-col gap-4 font-['Plus_Jakarta_Sans'] text-xs tracking-widest uppercase text-slate-500 dark:text-slate-400">
+<li><a class="hover:text-[#BE185D] underline-offset-4 hover:underline transition-all duration-300" href="#">PRIVACY</a></li>
+<li><a class="hover:text-[#BE185D] underline-offset-4 hover:underline transition-all duration-300" href="#">TERMS</a></li>
+<li><a class="hover:text-[#BE185D] underline-offset-4 hover:underline transition-all duration-300" href="#">EXCHANGE</a></li>
+<li><a class="hover:text-[#BE185D] underline-offset-4 hover:underline transition-all duration-300" href="#">CONTACT</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-headline text-on-surface font-bold mb-6 tracking-wide">GET IN TOUCH</h4>
+<ul class="flex flex-col gap-4 font-body text-sm text-secondary">
+<li>+1-212-456-7890</li>
+<li>curator@foreverbuy.in</li>
+</ul>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
