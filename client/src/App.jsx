@@ -1,20 +1,19 @@
 import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Collections from './components/Collections';
-import BestSellers from './components/BestSellers';
-import Newsletter from './components/Newsletter';
 import Footer from './components/Footer';
+import Home from './pages/Home';
+import About from './pages/About';
 
 function App() {
   return (
     <>
       <Navbar />
-      <main className="flex-grow pt-24">
-        <Hero />
-        <Collections />
-        <BestSellers />
-        <Newsletter />
+      <main className="flex-grow">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
       </main>
       <Footer />
     </>
