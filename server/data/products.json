@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "title": "Women Zip-Front Relaxed Fit Jacket",
+    "price": 129.00,
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuA91uXhcnNExnpZAwQGy46_vbnI9VIciE3YLbIihhVrwuom88_0oscTrT_1n0ybOrkUTTcBo5o0glo_dVqivBkAxgYwYaqEo6nSo4IltSIwMvqw7G3IoPxt137MJqlrkRqCo7tkp9b45TIQWIL9p3BUYJDBWicoufmOR-WeV6bp_IFmHtn0rwg-nTI3G9rDB2JNL3GN2JCzUjQCsdmy1j6wAjXA_GlhXY_YbTxHxUr6FGIpbEVRccbQHIHFdw5zKSFhw6UJLTOY_tm1",
+    "isNew": true,
+    "category": "Women",
+    "type": "Winterwear"
+  },
+  {
+    "id": 2,
+    "title": "Men Heavyweight Winter Parka",
+    "price": 199.00,
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuAsWIcxK4RSmabeu3au61F3MdNIOTbJNDk4an40am3JEE2xtda3P52voNyx-yDZgXhV4DOj6g4JL0fhrLWbLSS0pcTLmHERUEzmPfMP2lBnE5a08R4TSRq3MXHgebWynypqGVeXeKs3cL-rZxyBemI_OgNcEbJcDrpBrF-PasNfGLICGeTPg8Uj4CuKHLp8oPVmBWOSpd8yqYDQhM_uz3g5WZwl3tgXLcBqh3U1i1qKuMGShkeP3lwpRIRb1Tkfg8o67nRq6fzxC6Gx",
+    "isNew": false,
+    "category": "Men",
+    "type": "Winterwear"
+  },
+  {
+    "id": 3,
+    "title": "Women Silk Draped Blouse",
+    "price": 89.00,
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBBatzWrpOML8O9oP_iO8UFb8qgKZJOvDId2wvIbQgA8vLoraTkjq8cyRDoSjIghYRRJsi1Qi_4gxrNEAaRWKAz40rwq97al2XYVl2S0sTtgW4xn4JQX7HE9XIVhuOY6xZgIh4TK6E3AanYpWE7uHT7maBgFzRIqTXTEz6h7CdK13IjQH-L56GytaJJHkUZVuat1lcbnRDLIxRUeDvbJTHJgphPu7FlZPCyxsQWErT8tfaXj68lXfY25RVrwalfq9bsRSh60q0A2uLY",
+    "isNew": false,
+    "category": "Women",
+    "type": "Topwear"
+  },
+  {
+    "id": 4,
+    "title": "Men Selvedge Straight Fit Denim",
+    "price": 145.00,
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuCtUDVGFOeWZiQ9HmUXNVtCpJ1CbuW2whbmLhejjF38AcU80mAwbPXi_DdNHxKCD47BLoBJCxchhGRRqP3QMkHoY7DvRNeovz6Dv0ENpJjS9cqkAayPVfITrKi7ahu2MsWwKrZNz_j_QcVswviCafXGorXBqGsSj7wQdeoc1qtMlDYzZTKPUICD2RQwpRX5HbfvB93RZcCQCMkNVTixn8pslhXhqKsvj82Pf4aZpgjg6ipJy8fD0lZV4lqB2ZHIr15OUD-MGh5_GTLz",
+    "isNew": false,
+    "category": "Men",
+    "type": "Bottomwear"
+  },
+  {
+    "id": 5,
+    "title": "Kids Chunky Knit Sweater",
+    "price": 65.00,
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDDDB6ZeC52xtl1ZY9F0MXOl1iIcJso8txESjxEMrkSKxY1Y9Hs0kgEigb3n4gehjQAdGksL4c2JcQY9iOV33rWop6cGqO_UrBzc0o-OpiNc1U-teTEjzrgx7a1QhP_3PSZoOpMIFN2K241N9ql85F3vIb8K89m5kqGutYmKq9XaOMZMq6mRCfcIfN5dk0ohAXH6xnBbQel7OtBTuGVbCt0qt74LKLiXBI5lKXxaZxe-7ET7l-0vm_7nXmdL-iqk076baduiGyzY50t",
+    "isNew": false,
+    "category": "Kids",
+    "type": "Winterwear"
+  },
+  {
+    "id": 6,
+    "title": "Canvas Courier Archive Bag",
+    "price": 110.00,
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBuDlHOhTjzEX3iS5GxUJWzS3THpjjQSsjfDAuNOYFgkYMKFsZicNqejcJtsCZ-0GoxITEFMJ6NZHY_wjkGeB_55L6OXeLySl0P-hqZfy3SDJFs28K2xllw6KB4o8JMcCCuYFMyZgmw_pqq6xjrKCo99lMkIOCK2ZRuohkftmTB_D3y4TFhVEMWqKAXQqm94yUxZBEQ0J4K5zMY5-c8vRtix4GwfQEwwwl_ygDhuqwNPdMigTRvlzp7WBw8LGVPA_xS3gOTttTt9RFr",
+    "isNew": false,
+    "category": "Accessories",
+    "type": "Accessories"
+  },
+  {
+    "id": 7,
+    "title": "Structured Wool Blazer",
+    "price": 240.00,
+    "image": "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?q=80&w=2836&auto=format&fit=crop",
+    "isNew": false,
+    "category": "Men",
+    "type": "Topwear"
+  },
+  {
+    "id": 8,
+    "title": "Minimalist Cashmere Scarf",
+    "price": 85.00,
+    "image": "https://images.unsplash.com/photo-1520903920243-00d872a2d1c9?q=80&w=2787&auto=format&fit=crop",
+    "isNew": false,
+    "category": "Accessories",
+    "type": "Winterwear"
+  },
+  {
+    "id": 9,
+    "title": "Essential Cotton T-Shirt",
+    "price": 35.00,
+    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=2960&auto=format&fit=crop",
+    "isNew": true,
+    "category": "Men",
+    "type": "Topwear"
+  },
+  {
+    "id": 10,
+    "title": "Tailored Wide-Leg Trousers",
+    "price": 160.00,
+    "image": "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?q=80&w=2787&auto=format&fit=crop",
+    "isNew": false,
+    "category": "Women",
+    "type": "Bottomwear"
+  }
+]
