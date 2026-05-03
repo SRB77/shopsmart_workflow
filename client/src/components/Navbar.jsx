@@ -15,8 +15,7 @@ const Navbar = () => {
         </Link>
         <div className="hidden md:flex gap-8 items-center font-['Noto_Serif'] tracking-tighter uppercase">
           <NavLink className={navLinkClass} to="/" end>NEW ARRIVALS</NavLink>
-          <NavLink className={navLinkClass} to="/collections">COLLECTIONS</NavLink>
-          <NavLink className={navLinkClass} to="/curated">CURATED</NavLink>
+          <NavLink className={navLinkClass} to="/collection">COLLECTIONS</NavLink>
           <NavLink className={navLinkClass} to="/about">ABOUT</NavLink>
         </div>
         <div className="flex items-center gap-6 text-[#BE185D]">
