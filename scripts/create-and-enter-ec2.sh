@@ -92,3 +92,24 @@ printf "| %-20s | %-16s | %-16s | %-16s |\n" "Instance ID" "Public IP" "Name" "O
 printf "+----------------------+------------------+------------------+------------------+\n"
 printf "| %-20s | %-16s | %-16s | %-16s |\n" "$INSTANCE_ID" "$PUBLIC_IP" "$NAME" "$DISTRO"
 printf "+----------------------+------------------+------------------+------------------+\n"
+
+#Auto SSH into the machine 
+echo "Waitiing for ssh ready"
+sleep 30
+
+# Determine correct SSH user
+if [ "$OS" == "ubuntu" ]; then
+  SSH_USER="ubuntu"
+elif [ "$OS" == "amazon-linux" ]; then
+  SSH_USER="ec2-user"
+fi
+
+# Fix permissions (use variable!)
+chmod 400 "$KEY.pem"
+echo "Connecting to instance via SSH..."
+
+ssh -i "$KEY.pem" $SSH_USER@$PUBLIC_IP
+
+# wrong one by me
+# chmod KEY.pem
+# ssh -i KEY.pem NAME@$PUBLIC_IP
