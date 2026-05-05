@@ -20,7 +20,7 @@ resource "aws_ecs_task_definition" "task" {
   container_definitions = jsonencode([
     {
       name  = "shopsmart-container"
-      image = "020195185462.dkr.ecr.ap-south-1.amazonaws.com/shopsmart:latest"
+      image = "${aws_ecr_repository.repo.repository_url}:latest"
       portMappings = [
         {
           containerPort = 5001
