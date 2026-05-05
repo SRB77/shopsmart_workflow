@@ -3,7 +3,7 @@ resource "aws_ecs_cluster" "cluster" {
   name = "shopsmart-cluster"
 }
 
-# ✅ Use EXISTING IAM Role (instead of creating)
+# ✅ Use EXISTING IAM Role
 data "aws_iam_role" "ecs_task_execution_role" {
   name = "ecsTaskExecutionRole"
 }
@@ -31,11 +31,12 @@ resource "aws_ecs_task_definition" "task" {
   ])
 }
 
-# VPC + Subnets
+# Default VPC
 data "aws_vpc" "default" {
   default = true
 }
 
+# Subnets
 data "aws_subnets" "default" {
   filter {
     name   = "vpc-id"
@@ -43,24 +44,10 @@ data "aws_subnets" "default" {
   }
 }
 
-# Security Group
-resource "aws_security_group" "ecs_sg" {
+# ✅ Use EXISTING Security Group
+data "aws_security_group" "ecs_sg" {
   name   = "ecs-sg"
   vpc_id = data.aws_vpc.default.id
-
-  ingress {
-    from_port   = 5001
-    to_port     = 5001
-    protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-
-  egress {
-    from_port   = 0
-    to_port     = 0
-    protocol    = "-1"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
 }
 
 # ECS Service
@@ -74,6 +61,6 @@ resource "aws_ecs_service" "service" {
   network_configuration {
     subnets          = data.aws_subnets.default.ids
     assign_public_ip = true
-    security_groups  = [aws_security_group.ecs_sg.id]
+    security_groups  = [data.aws_security_group.ecs_sg.id]
   }
 }
