@@ -17,7 +17,7 @@ jobs:
         run: |
           cd server
           npm install
-          npm start &
+          PORT=5001 node server.js &
           sleep 5
 
       # 🔹 Run Client Tests (unit + integration + e2e if included)
