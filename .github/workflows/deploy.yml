@@ -1,25 +1,45 @@
-terraform:
-  needs: test
-  runs-on: ubuntu-latest
+name: Deploy Pipeline
 
-  steps:
-    - uses: actions/checkout@v4
+on:
+  push:
+  pull_request:
 
-    - name: Setup Terraform
-      uses: hashicorp/setup-terraform@v3
+jobs:
 
-    - name: Configure AWS
-      run: |
-        aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID
-        aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
-        aws configure set region $AWS_REGION
+  test:
+    runs-on: ubuntu-latest
 
-    - name: Terraform Init
-      run: |
-        cd terraform
-        terraform init
+    steps:
+      - uses: actions/checkout@v4
 
-    - name: Terraform Apply
-      run: |
-        cd terraform
-        terraform apply -auto-approve
+      - name: Install & Test
+        run: |
+          cd client
+          npm install
+          npm test
+
+  terraform:
+    needs: test
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+
+      - name: Configure AWS
+        run: |
+          aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID
+          aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
+          aws configure set region $AWS_REGION
+
+      - name: Terraform Init
+        run: |
+          cd terraform
+          terraform init
+
+      - name: Terraform Apply
+        run: |
+          cd terraform
+          terraform apply -auto-approve
