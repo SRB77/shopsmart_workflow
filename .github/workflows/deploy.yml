@@ -7,31 +7,25 @@ on:
 jobs:
 
   test:
-    runs-on: ubuntu-latest
+  runs-on: ubuntu-latest
 
-    steps:
-      - uses: actions/checkout@v4
+  steps:
+    - uses: actions/checkout@v4
 
-      - name: Install wait-on
-        run: npm install -g wait-on
+    # Start backend
+    - name: Start Backend
+      run: |
+        cd server
+        npm install
+        PORT=5001 node server.js &
+        sleep 10
 
-      - name: Start Backend
-        run: |
-          cd server
-          npm install
-          PORT=5001 node server.js > server.log 2>&1 &
-          sleep 5
-          cat server.log
-          cd ..
-
-      - name: Wait for backend
-        run: wait-on http://localhost:5001
-
-      - name: Run Tests
-        run: |
-          cd client
-          npm install
-          npm test
+    # Run tests
+    - name: Run Tests
+      run: |
+        cd client
+        npm install
+        npm test
 
   terraform:
     needs: test
