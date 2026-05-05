@@ -24,13 +24,13 @@ export default defineConfig({
     {
       command: 'cd ../server && npm start',
       port: 5001,
-      reuseExistingServer: !process.env.CI,
+      reuseExistingServer: true,
       timeout: 15000,
     },
     {
       command: 'npm run dev',
       port: 5173,
-      reuseExistingServer: !process.env.CI,
+      reuseExistingServer: true,
       timeout: 15000,
     },
   ],
