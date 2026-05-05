@@ -12,15 +12,19 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # 🔹 Start Backend
+      - name: Install wait-on
+        run: npm install -g wait-on
+
       - name: Start Backend
         run: |
           cd server
           npm install
           PORT=5001 node server.js &
-          sleep 5
+          cd ..
 
-      # 🔹 Run Client Tests (unit + integration + e2e if included)
+      - name: Wait for backend
+        run: wait-on http://localhost:5001
+
       - name: Run Tests
         run: |
           cd client

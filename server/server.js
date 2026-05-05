@@ -14,6 +14,11 @@ const PORT = process.env.PORT || 5001;
 app.use(cors());
 app.use(express.json());
 
+// ✅ Health check (ADD HERE)
+app.get('/health', (req, res) => {
+  res.send('OK');
+});
+
 // Helper function to read products
 const getProducts = () => {
   const dataPath = path.join(__dirname, 'data', 'products.json');
