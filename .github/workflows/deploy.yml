@@ -12,7 +12,16 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install & Test
+      # 🔹 Start Backend
+      - name: Start Backend
+        run: |
+          cd server
+          npm install
+          npm start &
+          sleep 5
+
+      # 🔹 Run Client Tests (unit + integration + e2e if included)
+      - name: Run Tests
         run: |
           cd client
           npm install
