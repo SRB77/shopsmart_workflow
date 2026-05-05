@@ -3,7 +3,7 @@ resource "aws_ecs_cluster" "cluster" {
   name = "shopsmart-cluster"
 }
 
-# Task Execution Role
+# IAM Role
 resource "aws_iam_role" "ecs_task_execution_role" {
   name = "ecsTaskExecutionRole"
 
@@ -47,6 +47,18 @@ resource "aws_ecs_task_definition" "task" {
   ])
 }
 
+# VPC + Subnets
+data "aws_vpc" "default" {
+  default = true
+}
+
+data "aws_subnets" "default" {
+  filter {
+    name   = "vpc-id"
+    values = [data.aws_vpc.default.id]
+  }
+}
+
 # Security Group
 resource "aws_security_group" "ecs_sg" {
   name   = "ecs-sg"
@@ -64,17 +76,6 @@ resource "aws_security_group" "ecs_sg" {
     to_port     = 0
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
-  }
-}
-
-data "aws_vpc" "default" {
-  default = true
-}
-
-data "aws_subnets" "default" {
-  filter {
-    name   = "vpc-id"
-    values = [data.aws_vpc.default.id]
   }
 }
 
